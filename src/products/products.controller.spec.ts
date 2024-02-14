@@ -17,6 +17,6 @@ describe('ProductsController', () => {
   });
 
   it('should return Hello World', () => {
-    expect(controller.getProducts()).toBe('Hello World!');
+    expect(controller.getProducts()).toMatchObject([]);
   });
 });
