@@ -22,7 +22,7 @@ describe('ProductsController', () => {
 
   it('should add a product', () => {
     expect(
-      controller.addProduct({ param: { name: 'Sandals', price: 1000 } }),
+      controller.addProduct({ name: 'Sandals', price: 1000 }),
     ).toMatchObject({ id: 1, name: 'Sandals', price: 1000 });
   });
 });

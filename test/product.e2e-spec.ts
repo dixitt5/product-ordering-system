@@ -3,6 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { ProductRequestDTO } from '../src/products/Interfaces/ProductRequestDTO';
+import { ProductResponseDTO } from '../src/products/Interfaces/ProductResponseDTO';
 
 describe('ProductController (e2e)', () => {
   let app: INestApplication;
@@ -25,6 +26,6 @@ describe('ProductController (e2e)', () => {
       .post('/products')
       .send({ name: 'Sandals', price: 1000 } as ProductRequestDTO)
       .expect(201)
-      .expect({ id: 1, name: 'Sandals', price: 1000 });
+      .expect({ id: 1, name: 'Sandals', price: 1000 } as ProductResponseDTO);
   });
 });
